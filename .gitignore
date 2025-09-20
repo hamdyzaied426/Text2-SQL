@@ -1,0 +1,66 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.egg-info/
+*.dist-info/
+.eggs/
+pip-wheel-metadata/
+build/
+dist/
+htmlcov/
+.coverage*
+.pytest_cache/
+.mypy_cache/
+.tox/
+.pyre/
+.pytype/
+
+# --- Environments & secrets ---
+venv/
+.env
+*.env
+*.env.*
+!.env.example
+.envrc
+.python-version
+
+# --- OS cruft ---
+.DS_Store
+Thumbs.db
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.code-workspace
+
+# --- Logs ---
+logs/
+*.log
+
+# --- Databases (SQLite) ---
+*.sqlite
+*.sqlite3
+*.db
+*.db-wal
+*.db-shm
+
+# --- LangChain / LangGraph artifacts & caches ---
+.langgraph/
+.langchain/
+# If you generate local runtime/state directories, ignore them too:
+# runtime/
+# state/
+
+# --- Streamlit ---
+.streamlit/secrets.toml
+# Keep config if you want to version it; otherwise uncomment next line:
+# .streamlit/
+
+# --- Notebooks ---
+.ipynb_checkpoints/
+
+# --- Node / Frontend (if any) ---
+node_modules/

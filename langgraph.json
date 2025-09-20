@@ -1,0 +1,53 @@
+{
+    "name": "database-chatbot",
+    "description": "An AI chatbot that interacts with a database in natural language",
+    "version": "1.0.0",
+    "dependencies": [
+      "langgraph>=0.0.55",
+      "langchain-groq>=0.1.5",
+      "langchain-core>=0.2.0",
+      "langchain>=0.2.0",
+      "pandas>=2.0.0",
+      "python-dotenv>=1.0.0",
+      "langgraph-cli[inmem]"
+    ],
+    "graphs": {
+      "database_chatbot": "agent:create_chatbot_graph",
+      "database_chatbot_chat": "agent:create_chatbot_graph_messages"
+    },
+    "env_vars": [
+      {
+        "name": "GROQ_API_KEY",
+        "description": "Groq API key for the language model",
+        "required": true,
+        "secret": true
+      },
+      {
+        "name": "DATABASE_PATH",
+        "description": "Path to the SQLite database file",
+        "default": "company_db.sqlite"
+      },
+      {
+        "name": "MODEL_NAME",
+        "description": "Language model name",
+        "default": "llama-3.1-8b-instant"
+      },
+      {
+        "name": "MODEL_TEMPERATURE",
+        "description": "LLM temperature to control creativity",
+        "default": "0.1"
+      },
+      {
+        "name": "MAX_TOKENS",
+        "description": "Maximum tokens in the response",
+        "default": "1000"
+      }
+    ],
+    "studio": {
+      "port": 8123,
+      "host": "localhost",
+      "auto_reload": true,
+      "log_level": "INFO"
+    }
+  }
+  
