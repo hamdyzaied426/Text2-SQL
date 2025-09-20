@@ -50,7 +50,6 @@ database-chatbot/
 ├── chatbot.py               # Legacy/CLI runner (optional)
 ├── langgraph.json           # Graph registry for LangGraph Studio (2 graphs)
 ├── requirements.txt         # Python dependencies
-├── .env.example             # Example env
 ├── .env                     # Your environment variables (not committed)
 └── README.md                # This documentation
 ```
